@@ -1,0 +1,26 @@
+Algoritmo Tarifa_Taxi
+    Definir kilometros, tarifaBase, recargo, total Como Real
+    Definir noche Como Caracter
+
+    Escribir "Ingrese los kilometros recorridos:"
+    Leer kilometros
+    Escribir "El viaje es de noche? Ingrese S o N:"
+    Leer noche
+
+    tarifaBase = 2 + (1.50 * kilometros)
+    recargo = 0
+
+    Si kilometros > 10 Entonces
+        recargo = recargo + (tarifaBase * 0.20)
+    FinSi
+
+    Si noche = "S" O noche = "s" Entonces
+        recargo = recargo + (tarifaBase * 0.30)
+    FinSi
+
+    total = tarifaBase + recargo
+
+    Escribir "Tarifa base: $", tarifaBase
+    Escribir "Recargos: $", recargo
+    Escribir "Total a pagar: $", total
+FinAlgoritmo
